@@ -1,0 +1,13 @@
+<div style="clear: both">
+<section>
+  <div style="display: inline-block;">
+    <h2>Messages:</h2>
+  </div>
+  <div style="display: inline-block;margin-left: 5px;">
+    <button *ngIf="messageService.messages.length" class="clear" (click)="messageService.clear()">clear</button>
+  </div>
+</section>
+<div *ngIf="messageService.messages.length" style="max-height: 100px; overflow-y: scroll; border: 1px solid black; padding: 2px;">
+  <div *ngFor='let message of messageService.messages'> {{message}} </div>
+</div>
+</div>
